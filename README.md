@@ -47,7 +47,7 @@
 # TL;DR
 
 <div style="text-align: justify">
-	AbbrevMan.nvim is a NeoVim plugin written in lua that ehances (n)vim's built-in abbreviations (`:h iab`) by giving users the possibility to manage different "dictionaries" for various natural (e.g. English, Spanish) and programming (e.g. Bash, Lua) languages; the idea is that the users will create their own dictionaries, however there are also some built-in ones that are worth checking out. It can be installed using your package manager of preference and it will work out of the box (the English dictionary enabled by default).
+	AbbrevMan.nvim is a NeoVim plugin written in lua that enhances (n)vim's built-in abbreviations (`:h iab`) by giving users the possibility to manage different "dictionaries" for various natural (e.g. English, Spanish) and programming (e.g. Bash, Lua) languages; the idea is that the users will create their own dictionaries, however there are also some built-in ones that are worth checking out. It can be installed using your package manager of preference and it will work out of the box (the English dictionary enabled by default).
 </div>
 
 
