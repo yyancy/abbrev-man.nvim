@@ -182,8 +182,15 @@ function M.load_programming_dictionaries_at_startup(option)
 
 		local file_type = u_dict:gsub("pr_", "")
 
+    local inner_am_dict = require("abbrev-man.dictionaries.langs_programming."..u_dict)
+    for element in pairs(user_langs_programming_list[u_dict]) do
+      if not has_element(inner_am_dict, element, "index") then
+        inner_am_dict[element] = user_langs_programming_list[u_dict][element]
+      end
+    end
+
 		if has_element(am_langs_programming_list, u_dict, "value") then
-			local inner_am_dict = require("abbrev-man.dictionaries.langs_programming."..u_dict)
+      vim.print(inner_am_dict)
 			for element in pairs(inner_am_dict) do
 				if has_element(user_langs_programming_list[u_dict], element, "index") then
 					if not (user_langs_programming_list[u_dict][element] == "rm_am") then
@@ -221,6 +228,7 @@ function M.load_programming_dictionaries_at_startup(option)
 end
 
 function M.load_natural_dictionaries_at_startup(option)
+  local user_dicts = opts["natural_dictionaries"]
 	for u_dict in pairs(user_dicts) do
 		if has_element(am_dicts, u_dict, "value") then
 

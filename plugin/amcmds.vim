@@ -47,10 +47,6 @@ endfunction
 " }}}
 
 
-" main {{{
-lua require('abbrev-man.main').main(0, 'load_natural_dictionaries_at_startup')
-lua require('abbrev-man.main').main(0, 'load_programming_dictionaries_at_startup')
-" }}}
 
 " Interface {{{
 command! -nargs=* -complete=custom,s:complete_aa_available_dictionaries AMLoad call v:lua.require("abbrev-man.main").main(1,amcmds#get_first_arg(<f-args>))
