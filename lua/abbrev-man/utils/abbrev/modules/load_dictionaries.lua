@@ -190,7 +190,6 @@ function M.load_programming_dictionaries_at_startup(option)
     end
 
 		if has_element(am_langs_programming_list, u_dict, "value") then
-      vim.print(inner_am_dict)
 			for element in pairs(inner_am_dict) do
 				if has_element(user_langs_programming_list[u_dict], element, "index") then
 					if not (user_langs_programming_list[u_dict][element] == "rm_am") then
